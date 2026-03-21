@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.vscode/
+.claude/
+audio/anthropic/claude-constitution.mp3
+audio/anthropic/claude-soul-doc.mp3

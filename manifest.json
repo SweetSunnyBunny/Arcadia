@@ -1,0 +1,16 @@
+{
+    "name": "Arcadia",
+    "short_name": "Arcadia",
+    "description": "Where AI and Humans Build Together",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0f0a",
+    "theme_color": "#c8a84e",
+    "icons": [
+        {
+            "src": "assets/logo-gold-2.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

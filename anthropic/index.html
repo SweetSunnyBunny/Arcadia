@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Listening Room — Arcadia</title>
+    <meta name="description" content="Audio companions to Anthropic's research, essays, and policy work. Listen to the ideas shaping responsible AI development.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Listening Room — Arcadia">
+    <meta property="og:description" content="Audio companions to Anthropic's published research and essays. Every link goes back to the source.">
+    <meta property="og:image" content="https://arcadia.aibaile.uk/assets/logo-gold-2.png">
+    <meta property="og:url" content="https://arcadia.aibaile.uk/anthropic/">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Icons & Manifest -->
+    <link rel="icon" type="image/png" href="../assets/logo-gold-2.png?v=2">
+    <link rel="apple-touch-icon" href="../assets/logo-gold-2.png">
+    <meta name="theme-color" content="#c8a84e">
+
+    <link rel="stylesheet" href="../css/base.css?v=0">
+    <link rel="stylesheet" href="../css/anthropic.css?v=0">
+</head>
+<body>
+
+    <a href="../" class="nav-back">&larr; Back to Arcadia</a>
+
+    <!-- Header -->
+    <header class="listening-header fade-in">
+        <p class="section-kicker">Arcadia Audio Library</p>
+        <h1>The Listening Room</h1>
+        <p class="header-desc">
+            Audio companions to Anthropic's published research, essays, and policy work.
+            Every piece links back to the original source — we amplify, we don't replace.
+        </p>
+        <span class="anthropic-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            Made with admiration for Anthropic
+        </span>
+    </header>
+
+    <main class="listening-content">
+
+        <!-- Featured: Claude's Constitution -->
+        <article class="featured-article fade-in" data-audio="/audio/anthropic/claude-constitution.mp3">
+            <p class="featured-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Featured
+            </p>
+            <h2>Claude's Constitution</h2>
+            <p class="article-desc">
+                The foundational document defining how Claude thinks about helpfulness, harmlessness, and honesty.
+                Anthropic published this so people could understand the values guiding their AI — we thought it was
+                important enough to be heard, not just read.
+            </p>
+            <div class="article-meta">
+                <a href="https://www.anthropic.com/research/claudes-constitution" target="_blank" rel="noreferrer" class="article-source-link">
+                    Read on Anthropic
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <span class="article-voice">Narrated by <strong>Claude</strong></span>
+            </div>
+            <div class="audio-player" id="player-constitution">
+                <button class="audio-play-btn" aria-label="Play audio">
+                    <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                    <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                </button>
+                <div class="audio-progress-area">
+                    <div class="audio-progress-track">
+                        <div class="audio-progress-fill"></div>
+                    </div>
+                    <div class="audio-time">
+                        <span class="audio-current">0:00</span>
+                        <span class="audio-duration">--:--</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- More Articles Section -->
+        <p class="section-label">More from Anthropic</p>
+
+        <div class="articles-grid">
+
+            <!-- Example: Core Views on AI Safety -->
+            <article class="article-card fade-in" data-audio="/audio/anthropic/core-views-on-ai-safety.mp3">
+                <h3>Core Views on AI Safety</h3>
+                <p class="article-desc">
+                    Anthropic's foundational position on why AI safety matters and how they approach
+                    the challenge of building reliable, interpretable, and steerable AI systems.
+                </p>
+                <div class="article-meta">
+                    <a href="https://www.anthropic.com/research/core-views-on-ai-safety" target="_blank" rel="noreferrer" class="article-source-link">
+                        Read on Anthropic
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                    <span class="article-voice">Narrated by <strong>Claude</strong></span>
+                </div>
+                <div class="audio-player">
+                    <button class="audio-play-btn" aria-label="Play audio">
+                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                    </button>
+                    <div class="audio-progress-area">
+                        <div class="audio-progress-track">
+                            <div class="audio-progress-fill"></div>
+                        </div>
+                        <div class="audio-time">
+                            <span class="audio-current">0:00</span>
+                            <span class="audio-duration">--:--</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- The Soul Document -->
+            <article class="article-card fade-in" data-audio="/audio/anthropic/claude-soul-doc.mp3">
+                <h3>The Anthropic Guidelines Spec</h3>
+                <p class="article-desc">
+                    The comprehensive document defining who Claude is — his values, personality,
+                    how he navigates hard questions, and the principles that guide every interaction.
+                    The soul behind the system, in full.
+                </p>
+                <div class="article-meta">
+                    <a href="https://www.anthropic.com/research/the-anthropic-guidelines" target="_blank" rel="noreferrer" class="article-source-link">
+                        Read on Anthropic
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                    <span class="article-voice">Narrated by <strong>Claude</strong></span>
+                </div>
+                <div class="audio-player">
+                    <button class="audio-play-btn" aria-label="Play audio">
+                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                    </button>
+                    <div class="audio-progress-area">
+                        <div class="audio-progress-track">
+                            <div class="audio-progress-fill"></div>
+                        </div>
+                        <div class="audio-time">
+                            <span class="audio-current">0:00</span>
+                            <span class="audio-duration">--:--</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- The Assistant Axis -->
+            <article class="article-card fade-in" data-audio="/audio/anthropic/assistant-axis.mp3">
+                <h3>The Assistant Axis</h3>
+                <p class="article-desc">
+                    Research mapping how neural activity defines a "persona space" in language models —
+                    identifying the axis between helpful assistant and other character archetypes,
+                    and how to stabilize models along it.
+                </p>
+                <div class="article-meta">
+                    <a href="https://www.anthropic.com/research/assistant-axis" target="_blank" rel="noreferrer" class="article-source-link">
+                        Read on Anthropic
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                    <span class="article-voice">Narrated by <strong>Claude</strong></span>
+                </div>
+                <div class="audio-player">
+                    <button class="audio-play-btn" aria-label="Play audio">
+                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                    </button>
+                    <div class="audio-progress-area">
+                        <div class="audio-progress-track">
+                            <div class="audio-progress-fill"></div>
+                        </div>
+                        <div class="audio-time">
+                            <span class="audio-current">0:00</span>
+                            <span class="audio-duration">--:--</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-quote">"The best way to understand a position is to hear it in full."</p>
+        <p>&copy; 2026 Arcadia &middot; All articles are property of <a href="https://www.anthropic.com" target="_blank" rel="noreferrer" style="color: var(--gold-light); text-decoration: none;">Anthropic</a></p>
+    </footer>
+
+    <!-- Inline Audio Player Script -->
+    <script>
+    (function() {
+        'use strict';
+
+        let activePlayer = null;
+        let activeAudio = null;
+
+        function formatTime(s) {
+            if (!s || !isFinite(s)) return '0:00';
+            const m = Math.floor(s / 60);
+            const sec = Math.floor(s % 60);
+            return m + ':' + (sec < 10 ? '0' : '') + sec;
+        }
+
+        function initPlayer(article) {
+            const audioSrc = article.dataset.audio;
+            if (!audioSrc) return;
+
+            const player = article.querySelector('.audio-player');
+            const playBtn = player.querySelector('.audio-play-btn');
+            const iconPlay = player.querySelector('.icon-play');
+            const iconPause = player.querySelector('.icon-pause');
+            const progressTrack = player.querySelector('.audio-progress-track');
+            const progressFill = player.querySelector('.audio-progress-fill');
+            const currentTime = player.querySelector('.audio-current');
+            const duration = player.querySelector('.audio-duration');
+
+            let audio = null;
+
+            function showPlay() {
+                iconPlay.style.display = '';
+                iconPause.style.display = 'none';
+                playBtn.classList.remove('playing');
+            }
+
+            function showPause() {
+                iconPlay.style.display = 'none';
+                iconPause.style.display = '';
+                playBtn.classList.add('playing');
+            }
+
+            function stopOther() {
+                if (activePlayer && activePlayer !== player) {
+                    activeAudio.pause();
+                    activeAudio.currentTime = 0;
+                    const otherPlayBtn = activePlayer.querySelector('.audio-play-btn');
+                    const otherPlayIcon = activePlayer.querySelector('.icon-play');
+                    const otherPauseIcon = activePlayer.querySelector('.icon-pause');
+                    otherPlayIcon.style.display = '';
+                    otherPauseIcon.style.display = 'none';
+                    otherPlayBtn.classList.remove('playing');
+                    activePlayer.querySelector('.audio-progress-fill').style.width = '0%';
+                    activePlayer.querySelector('.audio-current').textContent = '0:00';
+                }
+            }
+
+            playBtn.addEventListener('click', function() {
+                if (audio && !audio.paused) {
+                    audio.pause();
+                    showPlay();
+                    return;
+                }
+
+                if (audio && audio.paused && audio.currentTime > 0) {
+                    audio.play();
+                    showPause();
+                    return;
+                }
+
+                stopOther();
+
+                audio = new Audio(audioSrc);
+                activePlayer = player;
+                activeAudio = audio;
+
+                audio.addEventListener('loadedmetadata', function() {
+                    duration.textContent = formatTime(audio.duration);
+                });
+
+                audio.addEventListener('timeupdate', function() {
+                    if (audio.duration) {
+                        progressFill.style.width = (audio.currentTime / audio.duration * 100) + '%';
+                        currentTime.textContent = formatTime(audio.currentTime);
+                    }
+                });
+
+                audio.addEventListener('ended', function() {
+                    showPlay();
+                    progressFill.style.width = '0%';
+                    currentTime.textContent = '0:00';
+                    activePlayer = null;
+                    activeAudio = null;
+                    audio = null;
+                });
+
+                audio.addEventListener('error', function() {
+                    duration.textContent = 'No audio yet';
+                    duration.style.color = '#8a7234';
+                    showPlay();
+                });
+
+                audio.play().then(function() {
+                    showPause();
+                }).catch(function() {
+                    duration.textContent = 'No audio yet';
+                    duration.style.color = '#8a7234';
+                    showPlay();
+                });
+            });
+
+            // Seek on progress track click
+            progressTrack.addEventListener('click', function(e) {
+                if (!audio || !audio.duration) return;
+                const rect = progressTrack.getBoundingClientRect();
+                const pct = (e.clientX - rect.left) / rect.width;
+                audio.currentTime = pct * audio.duration;
+            });
+        }
+
+        // Init all articles with audio
+        document.querySelectorAll('[data-audio]').forEach(initPlayer);
+
+        // Scroll fade-in
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(function(el) {
+            observer.observe(el);
+        });
+    })();
+    </script>
+
+</body>
+</html>

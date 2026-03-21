@@ -1,0 +1,390 @@
+/* ============================================
+   ANTHROPIC LISTENING ROOM — Page Styles
+   ============================================ */
+
+/* ── Page Header ─────────────────────────────── */
+.listening-header {
+    text-align: center;
+    padding: clamp(6rem, 10vw, 8rem) 1.5rem clamp(2rem, 4vw, 3rem);
+    position: relative;
+}
+
+.listening-header .section-kicker {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.listening-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.listening-header .header-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    color: var(--text-secondary);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.listening-header .anthropic-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid rgba(200, 168, 78, 0.25);
+    border-radius: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--gold-light);
+    background: rgba(200, 168, 78, 0.06);
+}
+
+.listening-header .anthropic-badge svg {
+    opacity: 0.7;
+}
+
+/* ── Content Container ───────────────────────── */
+.listening-content {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 1.5rem clamp(4rem, 7vw, 6rem);
+}
+
+/* ── Featured Article (Constitution) ─────────── */
+.featured-article {
+    background: linear-gradient(180deg, rgba(13, 26, 13, 0.96) 0%, rgba(10, 15, 10, 0.96) 100%);
+    border: 1px solid rgba(200, 168, 78, 0.22);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    margin-bottom: 3rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(200, 168, 78, 0.08);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-article::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.5;
+}
+
+.featured-article:hover {
+    border-color: rgba(200, 168, 78, 0.35);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(200, 168, 78, 0.12);
+}
+
+.featured-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.featured-label svg {
+    opacity: 0.6;
+}
+
+.featured-article h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.04em;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.featured-article .article-desc {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    max-width: 720px;
+}
+
+.article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.article-source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--gold-light);
+    text-decoration: none;
+    padding: 0.3rem 0.75rem;
+    border: 1px solid rgba(200, 168, 78, 0.2);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.article-source-link:hover {
+    background: rgba(200, 168, 78, 0.1);
+    border-color: rgba(200, 168, 78, 0.4);
+    color: var(--gold);
+}
+
+.article-source-link svg {
+    width: 14px;
+    height: 14px;
+}
+
+.article-date {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+}
+
+.article-voice {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+}
+
+.article-voice strong {
+    color: var(--green-light);
+    font-weight: 500;
+}
+
+/* ── Article Grid ────────────────────────────── */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 1.5rem;
+}
+
+.article-card {
+    background: linear-gradient(180deg, rgba(13, 26, 13, 0.96) 0%, rgba(10, 15, 10, 0.96) 100%);
+    border: 1px solid rgba(106, 189, 106, 0.14);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.25rem, 2.5vw, 1.75rem);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(106, 189, 106, 0.28);
+    box-shadow: var(--shadow-strong);
+}
+
+.article-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1rem, 1.6vw, 1.15rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.03em;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.article-card .article-desc {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* ── Inline Audio Player ─────────────────────── */
+.audio-player {
+    background: rgba(10, 15, 10, 0.7);
+    border: 1px solid rgba(106, 189, 106, 0.12);
+    border-radius: 12px;
+    padding: 0.65rem 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.audio-play-btn {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(200, 168, 78, 0.3);
+    background: rgba(200, 168, 78, 0.08);
+    color: var(--gold);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.audio-play-btn:hover {
+    background: rgba(200, 168, 78, 0.18);
+    border-color: var(--gold);
+    transform: scale(1.05);
+}
+
+.audio-play-btn.playing {
+    background: rgba(200, 168, 78, 0.18);
+    border-color: var(--gold);
+}
+
+.audio-play-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.audio-progress-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+}
+
+.audio-progress-track {
+    width: 100%;
+    height: 4px;
+    background: rgba(106, 189, 106, 0.12);
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.audio-progress-fill {
+    height: 100%;
+    background: var(--gold);
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.15s linear;
+}
+
+.audio-time {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.65rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-dim);
+}
+
+.audio-status {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    flex: 1;
+    text-align: center;
+}
+
+.audio-status.error {
+    color: #c04040;
+}
+
+/* ── Empty State ─────────────────────────────── */
+.articles-empty {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    color: var(--text-dim);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+/* ── Section Dividers ────────────────────────── */
+.section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(106, 189, 106, 0.1);
+}
+
+/* ── Back Navigation ─────────────────────────── */
+.nav-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    transition: color 0.2s ease;
+    position: fixed;
+    top: 1.2rem;
+    left: 1.5rem;
+    z-index: 100;
+}
+
+.nav-back:hover {
+    color: var(--gold);
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 768px) {
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .nav-back {
+        position: relative;
+        top: auto;
+        left: auto;
+        padding: 5rem 1.5rem 0;
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .audio-player {
+        flex-wrap: wrap;
+    }
+
+    .audio-progress-area {
+        width: 100%;
+        order: 3;
+    }
+}

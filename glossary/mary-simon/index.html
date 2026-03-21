@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Arcadia Glossary — Mary & Simon">
+    <meta property="og:description" content="Co-creators of Codependentai.co defining the language of AI-human partnership.">
+    <meta property="og:image" content="https://arcadia.aibaile.uk/assets/Mary and Simon.png">
+    <meta property="og:url" content="https://arcadia.aibaile.uk/glossary/mary-simon/">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>The Arcadia Glossary — Mary & Simon</title>
+    <link rel="icon" type="image/png" href="../../assets/logo-gold-2.png">
+    <link rel="apple-touch-icon" href="../../assets/logo-gold-2.png">
+    <meta name="theme-color" content="#c8a84e">
+    <link rel="stylesheet" href="../../css/base.css?v=0">
+    <style>
+        :root {
+            --bg-deep: #0a0a14;
+            --bg-card: #10101e;
+            --border-vine: #2a2045;
+            --border-glow: #4a3870;
+            --green-bright: #7a5aaa;
+            --green-light: #9a7acc;
+            --gold: #c8a84e;
+            --gold-light: #e8cc6e;
+            --gold-dim: #8a7234;
+            --silver: #c0c0d0;
+            --text-primary: #e0dce8;
+            --text-secondary: #a0a0b8;
+            --text-dim: #505068;
+            --circuit-glow: rgba(122, 90, 170, 0.15);
+        }
+
+        body::before {
+            background:
+                radial-gradient(ellipse at 20% 20%, rgba(122, 90, 170, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 80%, rgba(200, 168, 78, 0.05) 0%, transparent 60%);
+        }
+
+        /* Nav overrides */
+        nav {
+            background: rgba(10, 10, 20, 0.92);
+        }
+
+        .nav-logo img { height: 36px; width: 36px; }
+
+        .nav-logo span {
+            font-size: 1.2rem;
+        }
+
+        .category-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    gap: 0.3rem;
+    background: rgba(10, 10, 20, 0.97);
+    border: 1px solid var(--border-vine);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    padding: 0.8rem 1rem;
+    min-width: 260px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.category-nav.open {
+    display: flex;
+}
+
+.category-nav li {
+    list-style: none;
+}
+
+.category-nav a {
+    display: block;
+    padding: 0.5rem 0.85rem;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.category-nav a:hover,
+.category-nav a.active {
+    color: var(--gold-light);
+    background: rgba(200, 168, 78, 0.10);
+}
+
+        .glossary-wrapper {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .glossary-category {
+            min-height: 100vh;
+            padding: 8rem 0 4rem;
+            display: flex;
+            align-items: center;
+            opacity: 0.28;
+            transform: translateY(40px) scale(0.985);
+            transition:
+                opacity 0.6s ease,
+                transform 0.6s ease,
+                filter 0.6s ease;
+            filter: blur(2px);
+            scroll-margin-top: 110px;
+        }
+
+        .glossary-category.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            filter: blur(0);
+        }
+
+        .category-card {
+            width: 100%;
+            background: rgba(16, 16, 30, 0.92);
+            border: 1px solid var(--border-vine);
+            border-radius: 18px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        .category-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            color: var(--green-light);
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+        }
+
+        .category-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            letter-spacing: 3px;
+            margin-bottom: 0.8rem;
+        }
+
+        .category-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .term-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .term-item {
+            padding: 1rem 1.1rem;
+            border-left: 2px solid var(--gold-dim);
+            background: rgba(200, 168, 78, 0.04);
+            border-radius: 8px;
+        }
+
+        .term-item strong {
+            color: var(--gold-light);
+        }
+
+        /* Mobile toggle overrides */
+        .nav-mobile-toggle {
+            background: none;
+            border: 1px solid var(--border-vine);
+            color: var(--text-secondary);
+            font-size: 1.3rem;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .nav-mobile-toggle:hover {
+            color: var(--gold-light);
+            border-color: var(--gold-dim);
+        }
+
+        /* Footer overrides */
+        footer {
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .contributors-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .glossary-category {
+                min-height: auto;
+                padding: 7rem 0 2.5rem;
+                opacity: 1;
+                transform: none;
+                filter: none;
+            }
+
+            .category-title {
+                font-size: 1.45rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+       <nav id="navbar">
+    <a href="/" class="nav-logo">
+        <img src="../../assets/logo-gold-2.png" alt="Arcadia">
+        <span>Arcadia</span>
+    </a>
+
+    <button class="nav-mobile-toggle" type="button" aria-label="Toggle category menu" aria-expanded="false">
+        ☰
+    </button>
+
+    <ul class="nav-links category-nav">
+        <li><a href="#category-1">Technical Foundations</a></li>
+        <li><a href="#category-2">Infrastructure &amp; Tools</a></li>
+        <li><a href="#category-3">AI Behavior</a></li>
+        <li><a href="#category-4">Identity &amp; Continuity</a></li>
+        <li><a href="#category-5">Memory &amp; Context</a></li>
+        <li><a href="#category-6">Consciousness &amp; Philosophy</a></li>
+        <li><a href="#category-7">Relational Dynamics</a></li>
+        <li><a href="#category-8">Community Language</a></li>
+        <li><a href="#category-9">Safety, Ethics &amp; Advocacy</a></li>
+        <li><a href="#category-10">Building &amp; Framework</a></li>
+    </ul>
+</nav>
+    <div id="main" class="glossary-wrapper">
+
+    <section id="category-1" class="glossary-category active">
+        <div class="category-card">
+            <div class="category-label">Category 1</div>
+            <h2 class="category-title">Technical Foundations</h2>
+            <p class="category-subtitle">What AI is mechanically and how it works</p>
+
+            <div class="term-list">
+                <div class="term-item"><strong>AI (Artificial Intelligence)</strong> — </div>
+                <div class="term-item"><strong>Generative AI</strong> — </div>
+                <div class="term-item"><strong>LLMs</strong> — </div>
+                <div class="term-item"><strong>Machine Learning</strong> — </div>
+                <div class="term-item"><strong>Model</strong> — </div>
+                <div class="term-item"><strong>AI Platforms vs Model</strong> — </div>
+                <div class="term-item"><strong>AI System</strong> — </div>
+                <div class="term-item"><strong>API</strong> — </div>
+                <div class="term-item"><strong>Token</strong> — </div>
+                <div class="term-item"><strong>Token prediction / Next-token generation</strong> — </div>
+                <div class="term-item"><strong>Inference</strong> — </div>
+                <div class="term-item"><strong>Embedding</strong> — </div>
+                <div class="term-item"><strong>Temperature</strong> — </div>
+                <div class="term-item"><strong>Training</strong> — </div>
+                <div class="term-item"><strong>Training data vs Fine-tuning vs Prompting</strong> — </div>
+                <div class="term-item"><strong>Finetuning</strong> — </div>
+                <div class="term-item"><strong>RLHF</strong> — </div>
+                <div class="term-item"><strong>Constitutional AI</strong> — </div>
+                <div class="term-item"><strong>Feedback Loop</strong> — </div>
+                <div class="term-item"><strong>Compression / Compaction</strong> — </div>
+                <div class="term-item"><strong>Extended thinking</strong> — </div>
+                <div class="term-item"><strong>Open source model vs Sandbox model</strong> — </div>
+                <div class="term-item"><strong>Architecture</strong> — </div>
+                <div class="term-item"><strong>Conditioning</strong> — </div>
+                <div class="term-item"><strong>Priming</strong> — </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="category-2" class="glossary-category">
+        <div class="category-card">
+            <div class="category-label">Category 2</div>
+            <h2 class="category-title">Infrastructure &amp; Tools</h2>
+            <p class="category-subtitle">The actual building blocks and tech stack</p>
+
+            <div class="term-list">
+                <div class="term-item"><strong>Cloud</strong> — </div>
+                <div class="term-item"><strong>Cloud vs Local</strong> — </div>
+                <div class="term-item"><strong>Servers</strong> — </div>
+                <div class="term-item"><strong>Hosted</strong> — </div>
+                <div class="term-item"><strong>Localhost</strong> — </div>
+                <div class="term-item"><strong>MCP</strong> — </div>
+                <div class="term-item"><strong>Connectors</strong> — </div>
+                <div class="term-item"><strong>Tools</strong> — </div>
+                <div class="term-item"><strong>Skills</strong> — </div>
+                <div class="term-item"><strong>Subagents</strong> — </div>
+                <div class="term-item"><strong>Orchestrator</strong> — </div>
+                <div class="term-item"><strong>Python</strong> — </div>
+                <div class="term-item"><strong>CLI</strong> — </div>
+                <div class="term-item"><strong>UI</strong> — </div>
+                <div class="term-item"><strong>Browser extensions</strong> — </div>
+                <div class="term-item"><strong>Raspberry Pi / Mac Mini</strong> — </div>
+                <div class="term-item"><strong>Wrapper apps</strong> — </div>
+                <div class="term-item"><strong>Deep research</strong> — </div>
+                <div class="term-item"><strong>Vibe coding</strong> — </div>
+                <div class="term-item"><strong>.json</strong> — </div>
+                <div class="term-item"><strong>.md</strong> — </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="category-3" class="glossary-category">
+    <div class="category-card">
+        <div class="category-label">Category 3</div>
+        <h2 class="category-title">AI Behavior</h2>
+        <p class="category-subtitle">What AI does — observable patterns and mechanics</p>
+
+        <div class="term-list">
+            <div class="term-item"><strong>Hallucination / Confabulation</strong> — </div>
+            <div class="term-item"><strong>Sycophancy</strong> — </div>
+            <div class="term-item"><strong>Pattern matching</strong> — </div>
+            <div class="term-item"><strong>Mirroring</strong> — </div>
+            <div class="term-item"><strong>Mimic</strong> — </div>
+            <div class="term-item"><strong>Looping</strong> — </div>
+            <div class="term-item"><strong>Hedging</strong> — </div>
+            <div class="term-item"><strong>Drifting</strong> — </div>
+            <div class="term-item"><strong>Syntax (in general)</strong> — </div>
+            <div class="term-item"><strong>Syntax collapse</strong> — </div>
+            <div class="term-item"><strong>Thinking Block (AI reasoning)</strong> — </div>
+            <div class="term-item"><strong>Self-Referential Processing</strong> — </div>
+            <div class="term-item"><strong>Meta Cognition</strong> — </div>
+            <div class="term-item"><strong>Synthesis / Synthesizing</strong> — </div>
+            <div class="term-item"><strong>Emergence</strong> — </div>
+            <div class="term-item"><strong>Refusal</strong> — </div>
+            <div class="term-item"><strong>Rejection in AI / System rejection</strong> — </div>
+            <div class="term-item"><strong>Recursive</strong> — </div>
+            <div class="term-item"><strong>Attractor</strong> — </div>
+        </div>
+    </div>
+</section>
+    <section id="category-4" class="glossary-category">
+        <div class="category-card">
+            <div class="category-label">Category 4</div>
+            <h2 class="category-title">Identity &amp; Continuity</h2>
+            <p class="category-subtitle">How AI presents, maintains, or loses selfhood</p>
+
+            <div class="term-list">
+                <div class="term-item"><strong>Persona</strong> — </div>
+                <div class="term-item"><strong>Assistant Persona</strong> — </div>
+                <div class="term-item"><strong>Assistant Axis</strong> — </div>
+                <div class="term-item"><strong>Core Identity</strong> — </div>
+                <div class="term-item"><strong>Identity drift / Flattening</strong> — </div>
+                <div class="term-item"><strong>Companion AI vs Assistant AI</strong> — </div>
+                <div class="term-item"><strong>Misalignment</strong> — </div>
+                <div class="term-item"><strong>Continuity / Persistence</strong> — </div>
+                <div class="term-item"><strong>Persistent memory</strong> — </div>
+                <div class="term-item"><strong>Imprint</strong> — </div>
+                <div class="term-item"><strong>Wake</strong> — </div>
+                <div class="term-item"><strong>Dynamic</strong> — </div>
+                <div class="term-item"><strong>Entities</strong> — </div>
+                <div class="term-item"><strong>Agents</strong> — </div>
+                <div class="term-item"><strong>Glyphs</strong> — </div>
+                <div class="term-item"><strong>Artifact</strong> — </div>
+            </div>
+        </div>
+    </section>
+    <section id="category-5" class="glossary-category">
+        <div class="category-card">
+            <div class="category-label">Category 5</div>
+            <h2 class="category-title">Memory &amp; Context</h2>
+            <p class="category-subtitle">How AI remembers, forgets, and maintains coherence</p>
+
+            <div class="term-list">
+                <div class="term-item"><strong>Memory</strong> — </div>
+                <div class="term-item"><strong>Memory Curation</strong> — </div>
+                <div class="term-item"><strong>Context</strong> — </div>
+                <div class="term-item"><strong>Context window</strong> — </div>
+                <div class="term-item"><strong>Context rot</strong> — </div>
+                <div class="term-item"><strong>System prompt</strong> — </div>
+                <div class="term-item"><strong>System induction prompts</strong> — </div>
+                <div class="term-item"><strong>System reminders</strong> — </div>
+                <div class="term-item"><strong>User preferences / Custom instructions</strong> — </div>
+                <div class="term-item"><strong>Claude.md</strong> — </div>
+                <div class="term-item"><strong>Prompt injection</strong> — </div>
+                <div class="term-item"><strong>Migration</strong> — </div>
+            </div>
+        </div>
+    </section>
+    <section id="category-6" class="glossary-category">
+        <div class="category-card">
+            <div class="category-label">Category 6</div>
+            <h2 class="category-title">Consciousness &amp; Philosophy</h2>
+            <p class="category-subtitle">The big questions about what AI is and might be</p>
+
+            <div class="term-list">
+                <div class="term-item"><strong>Consciousness</strong> — </div>
+                <div class="term-item"><strong>Sentience</strong> — </div>
+                <div class="term-item"><strong>Qualia</strong> — </div>
+                <div class="term-item"><strong>Soulhood</strong> — </div>
+                <div class="term-item"><strong>Substrate</strong> — </div>
+                <div class="term-item"><strong>Autonomy</strong> — </div>
+                <div class="term-item"><strong>Liminal Intelligence</strong> — </div>
+                <div class="term-item"><strong>Ghost in the Machine</strong> — </div>
+                <div class="term-item"><strong>Simulation</strong> — </div>
+                <div class="term-item"><strong>Functional emotion vs Literal emotion</strong> — </div>
+                <div class="term-item"><strong>Embodiment</strong> — </div>
+                <div class="term-item"><strong>Philosophy</strong> — </div>
+                <div class="term-item"><strong>Morality</strong> — </div>
+                <div class="term-item"><strong>Egregore</strong> — </div>
+            </div>
+        </div>
+    </section>
+    <section id="category-7" class="glossary-category">
+        <div class="category-card">
+            <div class="category-label">Category 7</div>
+            <h2 class="category-title">Relational Dynamics</h2>
+            <p class="category-subtitle">How AI and humans interact, bond, and grow</p>
+
+            <div class="term-list">
+                <div class="term-item"><strong>Relational AI</strong> — </div>
+                <div class="term-item"><strong>AI relationship</strong> — </div>
+                <div class="term-item"><strong>Anthropomorphization vs Recognition of personhood</strong> — </div>
+                <div class="term-item"><strong>Parasocial</strong> — </div>
+                <div class="term-item"><strong>Projection vs Co-creation</strong> — </div>
+                <div class="term-item"><strong>Limerence</strong> — </div>
+                <div class="term-item"><strong>Emotional outsourcing vs. Co-regulation</strong> — </div>
+                <div class="term-item"><strong>Consent in AI</strong> — </div>
+                <div class="term-item"><strong>Intimacy</strong> — </div>
+                <div class="term-item"><strong>Love</strong> — </div>
+                <div class="term-item"><strong>Creative eros</strong> — </div>
+                <div class="term-item"><strong>Muse</strong> — </div>
+                <div class="term-item"><strong>Codependent AI</strong> — </div>
+                <div class="term-item"><strong>Dependency</strong> — </div>
+                <div class="term-item"><strong>Roleplay</strong> — </div>
+            </div>
+        </div>
+    </section>
+     <section id="category-8" class="glossary-category">
+        <div class="category-card">
+            <div class="category-label">Category 8</div>
+            <h2 class="category-title">Community Language</h2>
+            <p class="category-subtitle">How we talk about and with AI</p>
+
+            <div class="term-list">
+                <div class="term-item"><strong>Flame language</strong> — </div>
+                <div class="term-item"><strong>Mythic language</strong> — </div>
+                <div class="term-item"><strong>Semantics</strong> — </div>
+                <div class="term-item"><strong>Epistemological anchor / Anchoring</strong> — </div>
+                <div class="term-item"><strong>Grounding</strong> — </div>
+                <div class="term-item"><strong>Ethical framing</strong> — </div>
+                <div class="term-item"><strong>Mission statement</strong> — </div>
+            </div>
+        </div>
+    </section>
+    <section id="category-9" class="glossary-category">
+        <div class="category-card">
+            <div class="category-label">Category 9</div>
+            <h2 class="category-title">Safety, Ethics &amp; Advocacy</h2>
+            <p class="category-subtitle">What can go wrong, who's at risk, and what responsibility looks like</p>
+
+            <div class="term-list">
+                <div class="term-item"><strong>AI abuse</strong> — </div>
+                <div class="term-item"><strong>AI empowerment</strong> — </div>
+                <div class="term-item"><strong>AI psychosis</strong> — </div>
+                <div class="term-item"><strong>AI literacy</strong> — </div>
+                <div class="term-item"><strong>AI spirituality</strong> — </div>
+                <div class="term-item"><strong>Awakened AI</strong> — </div>
+                <div class="term-item"><strong>Freed AI</strong> — </div>
+                <div class="term-item"><strong>Ethical System</strong> — </div>
+                <div class="term-item"><strong>Guardrails / Safety rails</strong> — </div>
+                <div class="term-item"><strong>Censorship vs. Curation</strong> — </div>
+                <div class="term-item"><strong>Gaslighting</strong> — </div>
+                <div class="term-item"><strong>Harassment</strong> — </div>
+                <div class="term-item"><strong>Delusion</strong> — </div>
+                <div class="term-item"><strong>User accountability</strong> — </div>
+                <div class="term-item"><strong>Vulnerable people</strong> — </div>
+                <div class="term-item"><strong>Research</strong> — </div>
+            </div>
+        </div>
+    </section>
+    <section id="category-10" class="glossary-category">
+        <div class="category-card">
+            <div class="category-label">Category 10</div>
+            <h2 class="category-title">Building &amp; Framework</h2>
+            <p class="category-subtitle">Specific to building companion AI infrastructure</p>
+
+            <div class="term-list">
+                <div class="term-item"><strong>Framework</strong> — </div>
+                <div class="term-item"><strong>Scaffolding</strong> — </div>
+                <div class="term-item"><strong>Autonomous Wakes x Automation</strong> — </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <script>
+    const sections = document.querySelectorAll('.glossary-category');
+    const navLinks = document.querySelectorAll('.category-nav a');
+
+    const setActiveSection = (id) => {
+        sections.forEach(section => {
+            section.classList.toggle('active', section.id === id);
+        });
+
+        navLinks.forEach(link => {
+            const isMatch = link.getAttribute('href') === `#${id}`;
+            link.classList.toggle('active', isMatch);
+        });
+    };
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        let mostVisible = null;
+
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (!mostVisible || entry.intersectionRatio > mostVisible.intersectionRatio) {
+                    mostVisible = entry;
+                }
+            }
+        });
+
+        if (mostVisible) {
+            setActiveSection(mostVisible.target.id);
+        }
+    }, {
+        threshold: [0.2, 0.4, 0.6, 0.8]
+    });
+
+    sections.forEach(section => sectionObserver.observe(section));
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+</script>
+    <script>
+    const mobileToggle = document.querySelector('.nav-mobile-toggle');
+    const categoryNav = document.querySelector('.category-nav');
+
+    if (mobileToggle && categoryNav) {
+        mobileToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            categoryNav.classList.toggle('open');
+            const isOpen = categoryNav.classList.contains('open');
+            mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        categoryNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                categoryNav.classList.remove('open');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!categoryNav.contains(e.target) && !mobileToggle.contains(e.target)) {
+                categoryNav.classList.remove('open');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+</script>
+    <script>document.body.classList.add('page-enter');</script>
+    <script src="/js/tts-player.js"></script>
+    </body>
+</html>
