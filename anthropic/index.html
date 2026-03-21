@@ -188,6 +188,8 @@
         <p>&copy; 2026 Arcadia &middot; All articles are property of <a href="https://www.anthropic.com" target="_blank" rel="noreferrer" style="color: var(--gold-light); text-decoration: none;">Anthropic</a></p>
     </footer>
 
+    <script src="../js/audio-host-config.js"></script>
+
     <!-- Inline Audio Player Script -->
     <script>
     (function() {
@@ -195,6 +197,7 @@
 
         let activePlayer = null;
         let activeAudio = null;
+        const externalAudioMap = window.ARCADIA_EXTERNAL_AUDIO || {};
 
         function formatTime(s) {
             if (!s || !isFinite(s)) return '0:00';
@@ -206,6 +209,7 @@
         function initPlayer(article) {
             const audioSrc = article.dataset.audio;
             if (!audioSrc) return;
+            const resolvedAudioSrc = externalAudioMap[audioSrc] || audioSrc;
 
             const player = article.querySelector('.audio-player');
             const playBtn = player.querySelector('.audio-play-btn');
@@ -260,7 +264,7 @@
 
                 stopOther();
 
-                audio = new Audio(audioSrc);
+                audio = new Audio(resolvedAudioSrc);
                 activePlayer = player;
                 activeAudio = audio;
 
